@@ -1,0 +1,8 @@
+types:
+int, bool, char
+
+return
+
+if, while
+
+read, print, exit

@@ -1,0 +1,44 @@
+Étape 1 : Définir la Grammaire du Langage
+
+    Écrire la spécification du langage :
+        Définissez les règles de syntaxe et de sémantique de votre langage.
+        Identifiez les différents types de constructions syntaxiques : déclarations, fonctions, expressions, etc.
+
+Étape 2 : Préparer les Fichiers de Grammaire et de Lexique
+
+    Créer le fichier de grammaire Bison (parser.y) :
+        Écrivez les règles de production basées sur votre spécification de grammaire.
+        Déclarez les tokens (mots-clés, opérateurs, identificateurs, etc.).
+        Ajoutez les actions à réaliser pour chaque règle (ceci peut inclure la création d'arbres syntaxiques, la vérification de la sémantique, etc.).
+
+    Créer le fichier de lexique Flex (lexer.l) :
+        Définissez les règles lexicales pour identifier les tokens.
+        Écrivez les expressions régulières correspondantes à chaque token.
+
+Étape 3 : Configurer l'Environnement de Compilation
+
+    Créer un Makefile :
+        Automatiser le processus de compilation.
+        Inclure des règles pour générer les fichiers nécessaires avec Flex et Bison, compiler le programme principal et linker les fichiers objets.
+
+Étape 4 : Implémenter le Programme Principal et les Fonctions Auxiliaires
+
+    Écrire le programme principal (main.c) :
+        Appeler yyparse() pour démarrer l'analyse syntaxique.
+        Gérer les erreurs et les messages d'erreur avec une fonction yyerror().
+
+    Ajouter des fichiers auxiliaires si nécessaire :
+        Définir des structures de données, des fonctions utilitaires, etc.
+
+Étape 5 : Compiler et Tester le Compilateur
+Tester le compilateur :
+
+    Écrire des programmes de test dans le langage que vous compilez.
+    Vérifier que le compilateur analyse correctement ces programmes et produit les sorties attendues.
+
+Test et Débogage
+
+    Écrire des programmes de test dans votre langage source et placez-les dans le répertoire tests/.
+    Exécuter le compilateur sur ces programmes et vérifier les sorties.
+    Déboguer les erreurs en ajustant les fichiers de grammaire, de lexique et de code.
+
