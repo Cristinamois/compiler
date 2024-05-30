@@ -6,7 +6,7 @@ void yyerror(const char *msg);
 %}
 
 %token NUMBER
-%token PLUS MINUS MULTIPLY DIVIDE
+%token PLUS MINUS MULTIPLY DIVIDE LPAREN RPAREN
 %left PLUS MINUS
 %left MULTIPLY DIVIDE
 
@@ -20,6 +20,7 @@ expression: expression PLUS expression { $$ = $1 + $3; }
           | expression MULTIPLY expression { $$ = $1 * $3; }
           | expression DIVIDE expression { $$ = $1 / $3; }
           | NUMBER { $$ = $1; }
+          | LPAREN expression RPAREN { $$ = $2; }
           ;
 
 %%

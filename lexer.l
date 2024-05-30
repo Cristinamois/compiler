@@ -8,8 +8,8 @@
 "-"         { return MINUS; }
 "*"         { return MULTIPLY; }
 "/"         { return DIVIDE; }
-"("         { return '('; }
-")"         { return ')'; }
+"("         { return LPAREN; }
+")"         { return RPAREN; }
 [ \t\n]     ; /* Ignore whitespace and newline */
 .           { fprintf(stderr, "Invalid character: %s\n", yytext); }
 %%
