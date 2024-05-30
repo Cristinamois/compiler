@@ -10,6 +10,7 @@
 "/"         { return DIVIDE; }
 "("         { return LPAREN; }
 ")"         { return RPAREN; }
+[a-zA-Z]+   { yylval.str = strdup(yytext); return IDENTIFIER; }
 [ \t\n]     ; /* Ignore whitespace and newline */
 .           { fprintf(stderr, "Invalid character: %s\n", yytext); }
 %%

@@ -5,7 +5,7 @@ YACC = bison
 
 all: compiler
 
-compiler: lex.yy.c parser.tab.o 
+compiler: lex.yy.c parser.tab.o symbole_table.c
 	$(CC) $(CFLAGS) $^ -o $@ -lfl
 
 lex.yy.c: lexer.l
